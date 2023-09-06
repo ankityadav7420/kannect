@@ -25,7 +25,7 @@
                     <tr>
                         <th>Number</th>
                         <th>Result</th>
-                        <th>Time In ms</th>
+                        <th>Time (ms) for Each</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,19 +36,19 @@
         </div>
         
         <div id="detailsPopup" class="details-container">
-            <button onclick="closePopup()">Close</button>
+            <button class="close-button" onclick="closePopup()">Close</button>
             <br/>
             <div>
-                <button onclick="showPrimeDetails()">Prime Details</button>
-                <button onclick="showNormalDetails()">Normal Details</button>
+                <button id="primeTimeButton" onclick="showPrimeDetails()">Prime Time</button>
+                <button id="normalTimeButton" onclick="showNormalDetails()">Normal Time</button>
             </div>
             <div id="primeDetails">
-                <h3>Prime Details:</h3>
+                <h3 class="center-text">Prime Time Details:</h3>
                 <table>
                     <thead>
                         <tr>
                             <th>Number</th>
-                            <th>Time In ms</th>
+                            <th>Time (ms) for Each</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -57,12 +57,12 @@
                 </table>
             </div>
             <div id="normalDetails">
-                <h3>Normal Details:</h3>
+                <h3 class="center-text">Normal Time Details:</h3>
                 <table>
                     <thead>
                         <tr>
                             <th>Number</th>
-                            <th>Time In ms</th>
+                            <th>Time (ms) for Each</th>
                         </tr>
                     </thead>
                     <tbody>

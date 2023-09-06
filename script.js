@@ -1,4 +1,3 @@
-// JavaScript code here
 function isPrime(num) {
     if (num <= 1) return false;
     if (num <= 3) return true;
@@ -38,7 +37,7 @@ function displayResults(results) {
         row.innerHTML = `
             <td>${entry.number}</td>
             <td>${entry.result}</td>
-            <td>${entry.time.toFixed(2)}</td>
+            <td>${entry.time.toFixed(3)}</td>
         `;
         tbody.appendChild(row);
     });
@@ -61,11 +60,11 @@ function findPrimes() {
     totalPrimeTime = primes.reduce((total, entry) => total + entry.time, 0);
     totalNormalTime = normalNumbers.reduce((total, entry) => total + entry.time, 0);
 
-    document.getElementById('totalTime').textContent = totalCalculationTime.toFixed(2);
+    document.getElementById('totalTime').textContent = totalCalculationTime.toFixed(3);
     const primeCount = primes.length;
     const normalCount = normalNumbers.length;
-    document.getElementById('averageTimePrime').textContent = (totalPrimeTime / primeCount).toFixed(2);
-    document.getElementById('averageTimeNormal').textContent = (totalNormalTime / normalCount).toFixed(2);
+    document.getElementById('averageTimePrime').textContent = (totalPrimeTime / primeCount).toFixed(3);
+    document.getElementById('averageTimeNormal').textContent = (totalNormalTime / normalCount).toFixed(3);
 }
 
 let primeDetailsData = [];
@@ -97,6 +96,12 @@ function showPrimeDetails() {
     const normalDetailsTable = document.getElementById('normalDetails');
     normalDetailsTable.style.display = 'none';
 
+    //  active button (Prime Time)
+    const primeTimeButton = document.getElementById('primeTimeButton');
+    const normalTimeButton = document.getElementById('normalTimeButton');
+    primeTimeButton.classList.add('active-button');
+    normalTimeButton.classList.remove('active-button');
+
     const primeDetailsTbody = primeDetailsTable.querySelector('tbody');
     primeDetailsTbody.innerHTML = '';
 
@@ -117,6 +122,12 @@ function showNormalDetails() {
     primeDetailsTable.style.display = 'none';
     const normalDetailsTable = document.getElementById('normalDetails');
     normalDetailsTable.style.display = 'block';
+
+    // active button (Normal Time)
+    const primeTimeButton = document.getElementById('primeTimeButton');
+    const normalTimeButton = document.getElementById('normalTimeButton');
+    normalTimeButton.classList.add('active-button');
+    primeTimeButton.classList.remove('active-button');
 
     const normalDetailsTbody = normalDetailsTable.querySelector('tbody');
     normalDetailsTbody.innerHTML = '';
