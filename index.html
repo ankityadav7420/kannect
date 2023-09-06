@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Finder</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Prime Number Finder</h1>
+    <div class="container">
+        <label for="start">Start:</label>
+        <input type="number" id="start" name="start" min="1">
+        <label for="end">End:</label>
+        <input type="number" id="end" name="end" min="1">
+        <button onclick="findPrimes()">Find Primes</button>
+        
+        <div id="result">
+            <h2>Results</h2>
+            <p>Total Time: <span id="totalTime">0.00</span> ms</p>
+            <p>Average Time (Prime): <span id="averageTimePrime">0.00</span> ms</p>
+            <p>Average Time (Normal): <span id="averageTimeNormal">0.00</span> ms</p>
+            <table id="resultTable">
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Result</th>
+                        <th>Time In ms</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Results -->
+                </tbody>
+            </table>
+            <button class="details-button" onclick="showDetails()">Details</button>
+        </div>
+        
+        <div id="detailsPopup" class="details-container">
+            <button onclick="closePopup()">Close</button>
+            <br/>
+            <div>
+                <button onclick="showPrimeDetails()">Prime Details</button>
+                <button onclick="showNormalDetails()">Normal Details</button>
+            </div>
+            <div id="primeDetails">
+                <h3>Prime Details:</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Number</th>
+                            <th>Time In ms</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Prime details  -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="normalDetails">
+                <h3>Normal Details:</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Number</th>
+                            <th>Time In ms</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Normal details  -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

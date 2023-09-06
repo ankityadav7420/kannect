@@ -1,0 +1,85 @@
+/* Add your CSS styling here */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+label {
+    font-weight: bold;
+}
+input[type="number"] {
+    width: 100px;
+    padding: 5px;
+}
+button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #555;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td {
+    border: 1px solid #ccc;
+}
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #f2f2f2;
+}
+.details-button {
+    display: block;
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+.details-button:hover {
+    background-color: #555;
+}
+.details-container {
+    display: none;
+    margin-top: 20px;
+}
+.details-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.details-container table, .details-container th, .details-container td {
+    border: 1px solid #ccc;
+}
+.details-container th, .details-container td {
+    padding: 8px;
+    text-align: center;
+}
+.details-container th {
+    background-color: #f2f2f2;
+}
